@@ -17,6 +17,6 @@ Reiskat. Projekti 1.1.
  - Joonas Vekkeli
  
  ja mitä osaamista kukin tuo projektiin?
- - Atk
+ - Atk taitoja sekä timanttisia ideoita
  
  
