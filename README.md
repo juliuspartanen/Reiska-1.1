@@ -6,9 +6,10 @@ Reiskat. Projekti 1.1.
  
  Kenelle? 
  - Autoileville opiskelijoille.
+ - Helsingin ulkopuolella asuville opiskelijoille.
  
  Miksi? 
- - Koska pysäköinti on hyvin vaikeaa Pasilan kampuksen alueella.
+ - Pasilan kampuksella ei ole järkeviä pysäköintimahdollisuuksia opiskelijoille.
  
  Keitä ovat tiimin jäsenet?
  - Markus Suomela
