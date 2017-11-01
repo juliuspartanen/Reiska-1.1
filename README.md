@@ -19,5 +19,7 @@ Reiskat. Projekti 1.1.
  
  ja mitä osaamista kukin tuo projektiin?
  - Atk taitoja sekä timanttisia ideoita
+ .
+ 
  
  
