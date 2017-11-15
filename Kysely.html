@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/tyyli.css">
+</head>
+<body>
+
+<form id="formi">
+<div id="lomake"></div>
+<br>
+<br>
+<button id="submitBtn" onClick="laheta()">Lähetä</button>
+</form>
+<script>
+
+$.getJSON( "kysymyksetpaikallinen.json", function( data ) {
+   // luetaan JSON-tiedoston sisältö ja tuodaan se sivulle
+   var items = [];  
+  $.each( data, function( key, d ) {
+	items.push( "<h2>" + d.kyselyName + "</br></br>" + d.kyselyDesc + "</h2>");
+	items.push( "<p>" + d.kysymys + "</p><input type=" + d.type +">");
+	
+	
+});
+
+
+
+ $( "<div/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "#lomake" );
+});
+
+
+   
+</script>
+
+</body>
+</html>
