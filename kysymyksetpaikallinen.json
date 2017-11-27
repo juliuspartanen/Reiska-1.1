@@ -1,7 +1,7 @@
 [
 {"kyselyId":1,
- "kyselyName":"Kysely opiskelijoiden pysäköintimahdollisuuksista.",
- "kyselyDesc":"Haluamme selvittää ovatko opiskelijat tyytyväisiä Pasilan kampuksen tarjoamiin pysäköinti mahdollisuuksiin ja pitäisikö koulun tarjota paremmat pysäköintipalvelut opiskelijoille.",
+ "kyselyName":"Kysely opiskelijoiden pysäköintimahdollisuuksista",
+ "kyselyDesc":"Haluamme selvittää ovatko opiskelijat tyytyväisiä Pasilan kampuksen tarjoamiin pysäköintimahdollisuuksiin ja pitäisikö koulun tarjota paremmat pysäköintipalvelut opiskelijoille.",
  "kysymys":"",
  "type":""},
  {"kyselyId":1,
@@ -21,5 +21,15 @@
 "type": "text",
 "kyselyDesc":"",
 "kysymysId":3,
-"kysymys":"Mikä on mielestäsi haastavinta koululle/koulun lähelle pysäköimisessä?"}
+"kysymys":"Mikä on mielestäsi haastavinta koululle/koulun lähelle pysäköimisessä?"},
+
+
+{"kyselyId":1,
+"kyselyName":"",
+"type": "radio",
+"kyselyDesc":"",
+"kysymysId":4,
+"kysymys":"Mikä on mielestäsi haastavinta koululle/koulun lähelle pysäköimisessä?",
+"value": ["Kyllä","Ei"]
+}
 ]
