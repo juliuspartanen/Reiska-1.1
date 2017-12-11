@@ -32,6 +32,10 @@ input[type="text"] {background-color:#e0ebeb;
 		height:50px;
 		font-family: 'Roboto', sans-serif;}
 		
+input[type="radio"] {display:block;
+					margin:auto;
+					}
+		
 #submitBtn {font-family: 'Oswald', sans-serif;
 			font-size: 25px;
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -48,9 +52,11 @@ h2 {
 p {
   font-size: 15px;
 }
-input {height: 100%;
+input [type="text"]{height: 100%;
 	   width: 90%;}
+	   
+input[type="radio"] {display:block;
+					margin:auto;}
 	
 }
-.button {color: red;}
 
