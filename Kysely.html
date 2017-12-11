@@ -32,14 +32,14 @@ $.getJSON( "http://proto325.haaga-helia.fi:8080/Kysely/api/kysymykset/1", functi
 	//items.push( "<input type=" + d.kysymysType + " value=" + d.valinnat[i] + " name=" + d.kysymysId + ">"+ d.valinnat[i]);}
 	
 	if (d.kysymykset[i].kysymysType=='text'){
-	items.push( "<p>" + d.kysymykset[i].kysymys + "</p><input type=" + d.kysymykset[i].kysymysType + " name=" + d.kysymykset[i].kysymysId + ">");}
+	items.push( "<p>" + d.kysymykset[i].kysymys + "</p><input type=" + d.kysymykset[i].kysymysType + " name=" + d.kysymykset[i].kysymysId + " id=" + d.kysymykset[i].kysymysId + ">");}
 	
 	if (d.kysymykset[i].kysymysType=="radio"){
 	
 	items.push( "<p>" + d.kysymykset[i].kysymys + "</p>");
 
 	for (a = 0; a < d.kysymykset[i].valinnat[0].valinnat.length; a++) { 
-	items.push( "<input type=" + d.kysymykset[i].kysymysType + " value=" + d.kysymykset[i].valinnat[0].valinnat[a].valintaName + " name=" + d.kysymykset[i].kysymysId + ">"+ d.kysymykset[i].valinnat[0].valinnat[a].valintaName);}
+	items.push( "<input type=" + d.kysymykset[i].kysymysType + " value=" + d.kysymykset[i].valinnat[0].valinnat[a].valintaName + " name=" + d.kysymykset[i].kysymysId + " id=" + d.kysymykset[i].kysymysId + ">"+ d.kysymykset[i].valinnat[0].valinnat[a].valintaName);}
 	
 	}
 	
@@ -55,15 +55,22 @@ $.getJSON( "http://proto325.haaga-helia.fi:8080/Kysely/api/kysymykset/1", functi
 
 function laheta(){
 
-var kysymysId =
-document.getElementById("kysymysId");
-document.querySelector('input[name = "valintaId"]:checked').valintaName;
+var eka = ddocument.querySelector('input[name = "1"]:checked').value;	
+var toka = document.querySelector('input[name = "2"]:checked').value;
+var kolmas = document.getElementById("3").value;
+var neljas = document.querySelector('input[name = "4"]:checked').value;
+var viides = document.querySelector('input[name = "5"]:checked').value;
+var kuudes = document.getElementById("6").value;
+var seitsemas = document.getElementById("7").value;
+var kahdeksas = document.querySelector('input[name = "8"]:checked').value;
+var yhdeksas = document.querySelector('input[name = "9"]:checked').value;
+var kysely = "{1:"+eka+",2:"+toka+",3:"+kolmas+",4:"+neljas+",5:"+viides+",6:"+kuudes+",7:"+seitsemas+",8:"+kahdeksas+",9:"+yhdeksas+"}" 
 
-alert(kysymysId);
+alert(kysely);
 $.ajax({
-	url: 'ohtun url',
+	url: 'ohtun url(http://proto325.haaga-helia.fi:8080/Kysely/api/lisaaKysymys)',
 	type: 'POST',
-	data: JSON.stringify(vastauksia),
+	data: JSON.stringify(kysely),
 	contentType: 'application/json; charset=utf-8',
 	dataType: 'json',
 	async: false,
