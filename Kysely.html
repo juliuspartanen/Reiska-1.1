@@ -12,7 +12,8 @@
 <br>
 <br>
 <form id="formi">
-<div id="lomake"></div>
+<div id="lomake">
+</div>
 <br>
 <br>
 <button id="submitBtn" onClick="laheta()">Lähetä</button>
@@ -39,7 +40,7 @@ $.getJSON( "http://proto325.haaga-helia.fi:8080/Kysely/api/kysymykset/1", functi
 	items.push( "<p>" + d.kysymykset[i].kysymys + "</p>");
 
 	for (a = 0; a < d.kysymykset[i].valinnat[0].valinnat.length; a++) { 
-	items.push( "<input type=" + d.kysymykset[i].kysymysType + " value=" + d.kysymykset[i].valinnat[0].valinnat[a].valintaName + " name=" + d.kysymykset[i].kysymysId + " id=" + d.kysymykset[i].kysymysId + ">"+ d.kysymykset[i].valinnat[0].valinnat[a].valintaName);}
+	items.push( "<br><input type=" + d.kysymykset[i].kysymysType + " value=" + d.kysymykset[i].valinnat[0].valinnat[a].valintaName + " name=" + d.kysymykset[i].kysymysId + " id=" + d.kysymykset[i].kysymysId + ">"+ d.kysymykset[i].valinnat[0].valinnat[a].valintaName);}
 	
 	}
 	
@@ -54,8 +55,7 @@ $.getJSON( "http://proto325.haaga-helia.fi:8080/Kysely/api/kysymykset/1", functi
 });
 
 function laheta(){
-
-var eka = ddocument.querySelector('input[name = "1"]:checked').value;	
+var eka = document.querySelector('input[name = "1"]:checked').value;	
 var toka = document.querySelector('input[name = "2"]:checked').value;
 var kolmas = document.getElementById("3").value;
 var neljas = document.querySelector('input[name = "4"]:checked').value;
@@ -68,14 +68,14 @@ var kysely = "{1:"+eka+",2:"+toka+",3:"+kolmas+",4:"+neljas+",5:"+viides+",6:"+k
 
 alert(kysely);
 $.ajax({
-	url: 'ohtun url(http://proto325.haaga-helia.fi:8080/Kysely/api/lisaaKysymys)',
+	url: 'http://proto325.haaga-helia.fi:8080/Kysely/api/lisaaKysymys',
 	type: 'POST',
 	data: JSON.stringify(kysely),
 	contentType: 'application/json; charset=utf-8',
 	dataType: 'json',
 	async: false,
 	success: function () {
-		alert('lähetys onnistui');
+		alert('Lähetys onnistui. Kiitos osallistumisestasi.');
 		}
 	});
 
