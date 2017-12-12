@@ -66,7 +66,7 @@ var kahdeksas = document.querySelector('input[name = "8"]:checked').value;
 var yhdeksas = document.querySelector('input[name = "9"]:checked').value;
 var kysely = "{1:"+eka+",2:"+toka+",3:"+kolmas+",4:"+neljas+",5:"+viides+",6:"+kuudes+",7:"+seitsemas+",8:"+kahdeksas+",9:"+yhdeksas+"}" 
 
-alert(kysely);
+alert('Lähetys onnistui. Kiitos osallistumisestasi.');
 $.ajax({
 	url: 'http://proto325.haaga-helia.fi:8080/Kysely/api/lisaaKysymys',
 	type: 'POST',
